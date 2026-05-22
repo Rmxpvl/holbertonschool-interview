@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def canUnlockAll(boxes):
     n = len(boxes)
     opened = set([0])   # boîte 0 déjà ouverte

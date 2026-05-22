@@ -7,6 +7,7 @@ inside the boxes. The function performs a graph traversal (DFS/BFS style)
 to explore reachable boxes and ignores invalid keys.
 """
 
+
 def canUnlockAll(boxes):
 
     

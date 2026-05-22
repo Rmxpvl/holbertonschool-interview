@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""Lockboxes module
+
+This module exposes a single function `canUnlockAll(boxes)` which returns
+True if all boxes can be opened starting from box 0 using the keys found
+inside the boxes. The function performs a graph traversal (DFS/BFS style)
+to explore reachable boxes and ignores invalid keys.
+"""
+
 def canUnlockAll(boxes):
     """Return True if all boxes can be opened starting from box 0."""
     n = len(boxes)

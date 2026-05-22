@@ -8,6 +8,8 @@ to explore reachable boxes and ignores invalid keys.
 """
 
 def canUnlockAll(boxes):
+
+    
     """Return True if all boxes can be opened starting from box 0."""
     n = len(boxes)
     if n == 0:

@@ -10,7 +10,7 @@ counts = {code: 0 for code in status_codes}
 file_size = 0
 line_count = 0
 pattern = re.compile(
-    r'^\s*-\s*\[[^\]]+\]\s*"GET /projects/260 HTTP/1\.1"\s+(\d{3})\s+(\d+)$'
+    r'^\d+\.\d+\.\d+\.\d+ - \[[^\]]+\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)$'
 )
 
 

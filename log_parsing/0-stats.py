@@ -35,7 +35,7 @@ if __name__ == "__main__":
                     counts[status] += 1
             if line_count % 10 == 0:
                 print_stats()
-        if line_count % 10 != 0:
+        if line_count == 0 or line_count % 10 != 0:
             print_stats()
     except KeyboardInterrupt:
         print_stats()

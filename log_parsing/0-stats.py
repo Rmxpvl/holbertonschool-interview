@@ -10,7 +10,7 @@ counts = {code: 0 for code in status_codes}
 file_size = 0
 line_count = 0
 pattern = re.compile(
-    r'^\d+\.\d+\.\d+\.\d+ - \[[^\]]+\] "GET /projects/\d+ HTTP/1\.1" (\d{3}) (\d+)$'
+    r'^\S+ - \[[^\]]+\] "GET /projects/\S+ HTTP/1\.1"\s+(\d+)\s+(\d+)'
 )
 
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     try:
         for raw_line in sys.stdin:
             line_count += 1
-            match = pattern.match(raw_line.rstrip("\n"))
+            match = pattern.search(raw_line.rstrip("\n"))
             if match:
                 status = int(match.group(1))
                 size = int(match.group(2))

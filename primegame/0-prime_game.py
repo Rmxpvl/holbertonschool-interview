@@ -4,7 +4,7 @@
 
 def isWinner(x, nums):
     """Return the name of the player who won the most rounds, or None."""
-    if not nums or x == 0:
+    if not nums or x <= 0:
         return None
 
     max_n = max(nums)
